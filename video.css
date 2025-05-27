@@ -1,0 +1,102 @@
+/* 상단 바 스타일 - 검은색 배경 */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  gap: 20px;
+}
+
+/* 메뉴 링크 스타일 */
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* 검색창 */
+.search-box {
+  display: flex;
+  gap: 8px;
+}
+
+.search-box input[type="text"] {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border: 1px solid #555;
+  border-radius: 15px;
+  width: 200px;
+  background-color: #222;
+  color: #eee;
+}
+
+.search-box input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+.search-box button {
+  padding: 6px 14px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #555;
+}
+
+/* 메인 콘텐츠 위치 조정 (상단 고정바 때문에 여백 추가) */
+main {
+  padding-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 영상 갤러리 그리드 - 2개씩 가로 배치 */
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.video-gallery iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;  /* 영상 비율 16:9 유지 */
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.video-gallery iframe:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,87 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url('book.jpg');  /* 이미지 경로 맞게 변경 */
+  background-repeat: no-repeat;        /* 반복하지 않음 */
+  background-position: center center; /* 중앙 정렬 */
+  background-size: contain;              /* 화면 크기에 맞게 확대/축소 */
+  background-attachment: fixed;        /* 스크롤해도 고정 */
+  /* 필요하면 아래 배경 색상 추가 */
+  background-color: #f0f0f0;
+}
+
+header {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 100;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid #333;
+  border-radius: 15px;
+  width: 220px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  grid-gap: 30px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+}
